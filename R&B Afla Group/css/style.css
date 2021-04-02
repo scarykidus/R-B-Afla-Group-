@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/Bebas-Regular.woff2') format('woff2'), url('../fonts/Bebas-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url('../fonts/Verdana.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url('../fonts/Verdana-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.license {
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.license-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-right: 15px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    width: 500px;
+    min-height: 512px;
+    margin: auto;
+    background-color: #F8F8F8;
+    border: 12px solid #EBEBEB;
+    box-sizing: border-box;
+}
+
+.license-form .input-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.input-wrapper span {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    font-family: 'Verdana', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #787878;
+    font-size: 13px;
+}
+
+.license-form__label {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 64px;
+    border: 1px solid transparent;
+    font-family: 'Bebas', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #787878;
+    cursor: pointer;
+}
+
+.license-form__label:hover {
+    background-color: rgba(51, 136, 171, 0.1);
+    border: 1px solid rgba(51, 136, 171, 0.2);
+}
+
+.license-form__label::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 21px;
+    width: 26px;
+    height: 26px;
+    border: 4px solid #DADADA;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.license-form__label:hover::before,
+.license-form__label:focus::before {
+    border-color: rgba(52, 100, 142, 0.5);
+}
+
+.license-form__input-radio:checked+.license-form__label::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 29px;
+    width: 10px;
+    height: 10px;
+    background-color: #0294BF;
+    border-radius: 50%;
+}
+
+.license-form__input-radio:checked+.license-form__label::before {
+    border-color: rgba(52, 100, 142);
+}
+
+.select-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.select-wrapper select {
+    margin-right: 68px;
+    padding-top: 6px;
+    padding-right: 30px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    color: #000000;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-wrapper label {
+    position: relative;
+    margin-right: 10px;
+    font-family: 'Verdana', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+}
+
+#license-number {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.select-wrapper label::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -55px;
+    width: 5px;
+    height: 5px;
+    background-image: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.total {
+    text-align: center;
+}
+
+.selected-plan {
+    text-align: center;
+}
+
+.total {
+    margin-top: 33px;
+    margin-bottom: 16px;
+    font-family: 'Bebas', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    color: #777777;
+}
+
+.total span {
+    color: #3388ab;
+}
+
+.total__value {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: auto;
+    font-family: 'Bebas', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    color: #3388ab;
+}
+
+.total__value::after {
+    content: 'us';
+    position: absolute;
+    top: 2px;
+    font-family: 'Bebas', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.license-form__button {
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 160px;
+    margin-bottom: 26px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-family: 'Verdana', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #33A845;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.license-form__button:hover,
+.license-form__button:focus {
+    background-color: rgba(51, 168, 69, 0.8);
+    transition: 0.5s all;
+}
+
+.license-form__button:active {
+    background-color: rgba(51, 168, 69, 0.6);
+}
+
+.selected-plan {
+    font-family: 'Verdana', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3388ab;
+}

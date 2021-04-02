@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&B Afla Group</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="license">
+        <form class="license-form" action="#" method="POST">
+            <div class="input-wrapper">
+                <input class="visually-hidden license-form__input-radio" type="radio" name="license-plan" id="license-plan-1" value="13">
+                <label class="license-form__label" for="license-plan-1">License plan #1</label>
+                <span>$13 per license</span>
+            </div>
+            <div class="input-wrapper">
+                <input class="visually-hidden license-form__input-radio" type="radio" name="license-plan" id="license-plan-2" value="22">
+                <label class="license-form__label" for="license-plan-2">License plan #2</label>
+                <span>$22 per license</span>
+            </div>
+            <div class="input-wrapper">
+                <input class="visually-hidden license-form__input-radio" type="radio" name="license-plan" id="license-plan-3" value="34" checked>
+                <label class="license-form__label" for="license-plan-3">License plan #3</label>
+                <span>$34 per license</span>
+            </div>
+            <div class="select-wrapper">
+                <label for="license-number">Number of licenses:</label>
+                <select name="license-number" id="license-number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option selected value="10">10</option>
+                    </select>
+            </div>
+            <p class="total">
+                <label for="total-value"> Total:</label>
+                <input name="total-value" id="total-value" type="number" hidden value="">
+                <span>$</span><span class="total__value">340</span></p>
+            <button class="license-form__button" type="submit">Buy now</button>
+            <p class="selected-plan">Selected plan: #<span class="selected-plan__value">3</span></p>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
